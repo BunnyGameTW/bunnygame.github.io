@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut Icon" type="image/x-icon" href="/images/favicon.ico" />
+
+    <!--Description-->
+    
+        <meta name="description" content="Game, Program, and Design!">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="AngelCheng">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="OpenGL works"/>
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="BunnyGame - 小兔子遊戲開發"/>
+
+    <!--Page Cover-->
+    
+        <meta property="og:image" content=""/>
+    
+
+    <!-- Title -->
+    
+    <title>OpenGL works - BunnyGame - 小兔子遊戲開發</title>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/sass/main.css">
+
+
+    <!--[if lt IE 8]>
+        
+<script src="/js/ie/html5shiv.js"></script>
+
+    <![endif]-->
+
+    <!--[if lt IE 8]>
+        
+<link rel="stylesheet" href="/sass/ie8.css">
+
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+        
+<link rel="stylesheet" href="/sass/ie9.css">
+
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="/css/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Google Analytics -->
+    
+
+
+<meta name="generator" content="Hexo 6.1.0"></head>
+
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Menu -->
+        <!-- Header -->
+<header id="header">
+    <div class="inner">
+
+        <!-- Logo -->
+        <a href="/" class="logo">
+            <span class="symbol"><img src="/images/logo_binly.png" alt="" /></span><span class="title">BunnyGame - 小兔子遊戲開發</span>
+        </a>
+
+        <!-- Nav -->
+        <nav>
+            <ul>
+                <li><a href="#menu">Menu</a></li>
+            </ul>
+        </nav>
+
+    </div>
+</header>
+
+<!-- Menu -->
+<nav id="menu">
+    <h2>Menu</h2>
+    <ul>
+        
+            <li>
+                <a href="/">Home</a>
+            </li>
+        
+            <li>
+                <a href="/archives">All</a>
+            </li>
+        
+            <li>
+                <a href="/tags/game/">Games</a>
+            </li>
+        
+            <li>
+                <a href="/tags/program">Program</a>
+            </li>
+        
+            <li>
+                <a href="/tags/design">Design</a>
+            </li>
+        
+    </ul>
+</nav>
+
+
+        <div id="main">
+            <div class="inner">
+
+                <!-- Main Content -->
+                
+
+    <h1>OpenGL works</h1>
+
+
+
+<!-- Gallery -->
+
+
+<!-- Content -->
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>上課時利用<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/OpenGL">openGL</a>製作的三個作品，練練自己的圖學功力！</p>
+<h2 id="Shooter-彈幕射擊遊戲"><a href="#Shooter-彈幕射擊遊戲" class="headerlink" title="Shooter - 彈幕射擊遊戲"></a>Shooter - 彈幕射擊遊戲</h2><p>一個很陽春的彈幕遊戲，讓我們了解如何使用OpenGL畫出圖形<br>但可怕的是，這個專案的程式碼被我弄丟了，而且是在要寫文章的時候才發現(都過了2年😑<br>遊戲說明：</p>
+<ol>
+<li>滑鼠控制飛機移動</li>
+<li>三種小怪 各自有不同移動軌跡</li>
+<li>BOSS依照被攻擊次數會有三階段攻擊</li>
+<li>吃道具來升級子彈</li>
+</ol>
+<div class="video-container"><iframe src="https://www.youtube.com/embed/GReqET7rQXo" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
+</br>
+
+<h2 id="Room-一個房間"><a href="#Room-一個房間" class="headerlink" title="Room - 一個房間"></a>Room - 一個房間</h2><p>實作一個很醜的房間，有一個會旋轉的主燈、三盞環境光、四個OBJ模型</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/aekly268/Room"><img class="itch_and_ghcard" src="https://gh-card.dev/repos/aekly268/Room.svg"></a></p>
+<div class="video-container"><iframe src="https://www.youtube.com/embed/eU8p02WpyNk" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
+
+<h2 id="Rooooom-五個房間"><a href="#Rooooom-五個房間" class="headerlink" title="Rooooom - 五個房間"></a>Rooooom - 五個房間</h2><p>這個作品主要是練習各種貼圖、模型的使用，硬要放在五個房間裡(還沒有門XD</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/aekly268/FiveRoom"><img class="itch_and_ghcard" src="https://gh-card.dev/repos/aekly268/FiveRoom.svg"></a></p>
+<div class="video-container"><iframe src="https://www.youtube.com/embed/NipZ8obWtD8" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
+
+<h2 id="程式小筆記"><a href="#程式小筆記" class="headerlink" title="程式小筆記"></a>程式小筆記</h2><ol>
+<li>物件池：避免頻繁的new或delete，會選擇使用串列來管理可以使用的、正在使用的子彈<br>  (程式碼弄丟了…詳細的可以參考以前的這篇<a href="/CocosWorks">Cocos2d-x</a>)</li>
+<li>GPU的世界：GPU擅長做平行運算，被利用在繪圖上<div class="video-container"><iframe src="https://www.youtube.com/embed/-P28LKWTzrI" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
+<br></li>
+<li><a target="_blank" rel="noopener" href="https://learnopengl.com/Introduction">實用OpenGL教學</a></li>
+</ol>
+
+
+<!-- Tags -->
+
+
+
+<div class="tags">
+    <a href="/tags/game/" class="button small">game</a> <a href="/tags/program/" class="button small">program</a>
+</div>
+
+
+
+<!-- next article-->
+
+
+  
+    <a href="/LoveFunghi/" class="button small" title="Love Funghi">上一篇:Love Funghi</a>
+  
+
+
+
+  
+
+
+
+
+<!-- Comments -->
+<div>
+    
+
+
+</div>
+
+
+
+            </div>
+        </div>
+
+        <!-- Footer -->
+<footer id="footer">
+    <div class="inner">
+        <section>
+            <h2>About</h2>
+            <div>
+
+                Hi, I'm a cute bunny which is crazy about game, and my goal is to make more fun games!
+            </div>
+
+        </section>
+        <section>
+            <h2>Follow</h2>
+
+            <ul class="icons">
+                
+                    <li><a href="https://twitter.com/BunnyGameTW" class="icon style2 fa-twitter" target="_blank" ><span class="label">Twitter</span></a></li>
+                
+                
+                    <li><a href="https://www.facebook.com/OnlyOneLikeBunnyGame/" class="icon style2 fa-facebook" target="_blank" ><span class="label">Facebook</span></a></li>
+                
+                
+                
+                
+                    <li><a href="https://github.com/aekly268" class="icon style2 fa-github" target="_blank" ><span class="label">GitHub</span></a></li>
+                
+                
+                
+                
+                
+                
+                
+                    <li><a href="https://www.youtube.com/channel/UC5M9CRDjm6cf-9Z-xq8S4-A/" class="icon style2 fa-youtube" target="_blank" ><span class="label">Youtube</span></a></li>
+                
+                
+
+            </ul>
+        
+
+        </section>
+
+    </div>
+</footer>
+
+    </div>
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+
+<script src="/js/jquery.min.js"></script>
+
+
+<!-- skel -->
+
+<script src="/js/skel.min.js"></script>
+
+
+<!-- Custom Code -->
+
+<script src="/js/util.js"></script>
+
+
+<!--[if lte IE 8]>
+
+<script src="/js/ie/respond.min.js"></script>
+
+<![endif]-->
+
+<!-- Custom Code -->
+
+<script src="/js/main.js"></script>
+
+
+<!-- Gallery -->
+<script src="//cdn.rawgit.com/noelboss/featherlight/1.3.5/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
