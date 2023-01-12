@@ -174,7 +174,7 @@
 <h2 id="🐱Github🐱"><a href="#🐱Github🐱" class="headerlink" title="🐱Github🐱"></a>🐱Github🐱</h2><p><a target="_blank" rel="noopener" href="https://github.com/aekly268/Streemon"><img class="itch_and_ghcard" src="https://gh-card.dev/repos/aekly268/Streemon.svg"></a></p>
 <h2 id="✏️筆記✏️"><a href="#✏️筆記✏️" class="headerlink" title="✏️筆記✏️"></a>✏️筆記✏️</h2><p>解謎遊戲最重要的就是謎題和劇本，主要的功能如下：</p>
 <ol>
-<li><p>對話系統<br>  和<a href="/crazyFood/">食物也瘋狂</a>的對話基本上差不多，只是這次改成一句一句地呈現，並且加上一些參數來做狀態判定<br>  如果有需要特別的事情，像是結束、或讓角色講到一半做些特別的表現就可以利用參數的不同進行調整<br>  a. 參數意義：說話的人, 說第幾句話, 下個要說話的人, 下個人說的話是他的第幾句話, 說話內容</p>
+<li><p>對話系統<br>  和<a href="/crazy-food/">食物也瘋狂</a>的對話基本上差不多，只是這次改成一句一句地呈現，並且加上一些參數來做狀態判定<br>  如果有需要特別的事情，像是結束、或讓角色講到一半做些特別的表現就可以利用參數的不同進行調整<br>  a. 參數意義：說話的人, 說第幾句話, 下個要說話的人, 下個人說的話是他的第幾句話, 說話內容</p>
   <figure class="highlight json"><figcaption><span>csv格式</span><a target="_blank" rel="noopener" href="https://github.com/aekly268/Streemon/blob/master/Assets/Resources/test1223.csv">mainTalk.csv</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">bird<span class="punctuation">,</span><span class="number">1</span><span class="punctuation">,</span>yellow<span class="punctuation">,</span><span class="number">6</span><span class="punctuation">,</span>唷！</span><br><span class="line">yellow<span class="punctuation">,</span><span class="number">6</span><span class="punctuation">,</span>bird<span class="punctuation">,</span><span class="number">2</span><span class="punctuation">,</span>唷！</span><br><span class="line">bird<span class="punctuation">,</span><span class="number">2</span><span class="punctuation">,</span>yellow<span class="punctuation">,</span><span class="number">7</span><span class="punctuation">,</span>你在這裡做啥？</span><br><span class="line">yellow<span class="punctuation">,</span><span class="number">7</span><span class="punctuation">,</span>bird<span class="punctuation">,</span><span class="number">3</span><span class="punctuation">,</span>噢，我是在各處旅行的途中，因為飛行器壞了，又剛好遇上</span><br></pre></td></tr></table></figure>
 <p>  b. 從主程式持續呼叫talk，直到對話結束</p>
   <figure class="highlight cs"><figcaption><span>talk</span><a target="_blank" rel="noopener" href="https://github.com/aekly268/Streemon/blob/master/Assets/Scripts/GameSystem/Talk.cs">talk.cs</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">nextTalk</span>()</span> &#123;        <span class="comment">//依據參數來判斷下一次要做什麼事情  </span></span><br><span class="line">       <span class="keyword">if</span> (nextName != <span class="string">&quot;0&quot;</span> &amp;&amp; nextParagraph.ToString() != <span class="string">&quot;0&quot;</span>)<span class="comment">//1.special, 2.normal</span></span><br><span class="line">       &#123;</span><br><span class="line">           setSpecialTalkBehavior();<span class="comment">//說話 or 說話+做事情</span></span><br><span class="line">       &#125;</span><br><span class="line">       <span class="keyword">else</span> <span class="comment">//1.talk end 2.set talk num</span></span><br><span class="line">       &#123;</span><br><span class="line">           setTalkBehavior();<span class="comment">//儲存data</span></span><br><span class="line">           GameManager.game.Player.Playerstate = Player.PlayerState.idle;                    </span><br><span class="line">           GameManager.game.Player.OnItemEndTalked();</span><br><span class="line">           GameManager.game.Setactive(GameManager.game.TalkUI, <span class="literal">false</span>);</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure></li>
@@ -200,13 +200,13 @@
 
 
   
-    <a href="/2018FGJ/" class="button small" title="Spy run run">上一篇:Spy run run</a>
+    <a href="/spy-run-run/" class="button small" title="Spy run run">上一篇:Spy run run</a>
   
 
 
 
   
-    <a href="/2018KGJ/" class="button small" title="Sumo">下一篇:Sumo</a>
+    <a href="/sumo/" class="button small" title="Sumo">下一篇:Sumo</a>
   
 
 
