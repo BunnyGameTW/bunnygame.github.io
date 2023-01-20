@@ -2575,9 +2575,9 @@ button,
     width: 25%;
     float: left;
     min-width: 200px; }
-    #main .inner .gallery-container .picture-container a {
+    #main .inner .gallery-container .picture-container div {
       border: none; }
-      #main .inner .gallery-container .picture-container a .img-thumbnail {
+      #main .inner .gallery-container .picture-container div .img-thumbnail {
         padding-right: 20px;
         width: 100%; }
 
