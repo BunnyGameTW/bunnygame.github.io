@@ -1,8 +1,4 @@
 @import url(font-awesome.min.css);
-@font-face {
-  font-family: 'jftest';
-  src: url("../fonts/jf-openhuninn-1.0.ttf"); }
-
 /*
 	Phantom by HTML5 UP
 	html5up.net | @n33co
@@ -1026,9 +1022,9 @@ body {
 /* Type */
 body, input, select, textarea {
   color: #585858;
-  font-family: jftest, "Microsoft JhengHei", "Source Sans Pro", Helvetica, sans-serif;
+  font-family: "Microsoft JhengHei", "Source Sans Pro", Helvetica, sans-serif;
   font-size: 16pt;
-  font-weight: 300;
+  font-weight: 700;
   line-height: 1.75; }
   @media screen and (max-width: 1680px) {
     body, input, select, textarea {
@@ -1050,7 +1046,7 @@ a {
     color: #fb8d8d !important; }
 
 strong, b {
-  font-weight: 900; }
+  font-weight: 1100; }
 
 em, i {
   font-style: italic; }
@@ -1060,7 +1056,7 @@ p {
 
 h1 {
   font-size: 2.75em;
-  font-weight: 700;
+  font-weight: 900;
   line-height: 1.3;
   margin: 0 0 1em 0;
   letter-spacing: -0.035em; }
@@ -1077,7 +1073,7 @@ h1 {
       font-size: 1.75em; } }
 
 h2, h3, h4, h5, h6 {
-  font-weight: 900;
+  font-weight: 1100;
   line-height: 1.5;
   margin: 0 0 2em 0;
   text-transform: uppercase;
@@ -1132,14 +1128,14 @@ blockquote {
 code {
   background: rgba(144, 144, 144, 0.075);
   border-radius: 4px;
-  font-family: jftest, "Courier New", monospace;
+  font-family: "Courier New", monospace;
   font-size: 0.9em;
   margin: 0 0.25em;
   padding: 0.25em 0.65em; }
 
 pre {
   -webkit-overflow-scrolling: touch;
-  font-family: jftest, "Courier New", monospace;
+  font-family: "Courier New", monospace;
   font-size: 0.9em;
   margin: 0 0 2em 0; }
   pre code {
@@ -1182,7 +1178,7 @@ pre > code {
   width: 100%;
   box-sizing: border-box;
   padding: 15px;
-  font-family: jftest, Courier New, Courier, monospace;
+  font-family: Courier New, Courier, monospace;
   border: none;
   margin: 0;
   cursor: text;
@@ -1193,7 +1189,7 @@ pre > code {
 code {
   font-size: 15px;
   display: inline-block;
-  font-family: jftest, "Courier New", Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   font-weight: 400;
   background-color: #f7f8f8;
   padding: 0 10px; }
@@ -1220,7 +1216,7 @@ figure.highlight .tag,
 .codeblock .gutter,
 .codeblock .code,
 .codeblock .tag {
-  font-family: jftest, Courier New, Courier, monospace;
+  font-family: Courier New, Courier, monospace;
   border: none;
   padding: 0;
   margin: 0;
@@ -1288,7 +1284,7 @@ figure.highlight .line,
 
 .gist .line,
 .gist .line-number {
-  font-family: jftest, "Courier New", Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   font-size: 1em;
   margin: 0 0 5px 0; }
 
@@ -1970,7 +1966,7 @@ dl {
   margin: 0 0 2em 0; }
   dl dt {
     display: block;
-    font-weight: 900;
+    font-weight: 1100;
     margin: 0 0 1em 0; }
   dl dd {
     margin-left: 2em; }
@@ -2016,7 +2012,7 @@ form {
 label {
   display: block;
   font-size: 0.9em;
-  font-weight: 900;
+  font-weight: 1100;
   margin: 0 0 1em 0; }
 
 input[type="text"],
@@ -2110,7 +2106,7 @@ input[type="radio"] {
     cursor: pointer;
     display: inline-block;
     font-size: 1em;
-    font-weight: 300;
+    font-weight: 700;
     padding-left: 2.55em;
     padding-right: 0.75em;
     position: relative; }
@@ -2222,7 +2218,7 @@ table {
     padding: 0.75em 0.75em; }
   table th {
     font-size: 0.9em;
-    font-weight: 900;
+    font-weight: 1100;
     padding: 0 0.75em 0.75em 0.75em;
     text-align: left; }
   table thead {
@@ -2266,7 +2262,7 @@ button,
   cursor: pointer;
   display: inline-block;
   font-size: 0.8em;
-  font-weight: 900;
+  font-weight: 1100;
   height: 3.5em;
   letter-spacing: 0.35em;
   line-height: 3.45em;
@@ -2536,7 +2532,7 @@ button,
   margin: 70px 0 30px 0; }
   .archives .archive-title {
     margin: 0 0 30px 27px;
-    font-weight: 900;
+    font-weight: 1100;
     letter-spacing: 0.35em;
     text-decoration: none;
     text-transform: uppercase;
@@ -2608,7 +2604,7 @@ button,
     display: block;
     border-bottom: 0;
     color: inherit;
-    font-weight: 900;
+    font-weight: 1100;
     letter-spacing: 0.35em;
     margin: 0 0 2.5em 0;
     text-decoration: none;
@@ -2653,7 +2649,7 @@ button,
           border-radius: 4px;
           border: 0;
           font-size: 0.8em;
-          font-weight: 900;
+          font-weight: 1100;
           letter-spacing: 0.35em;
           text-transform: uppercase; }
         #header nav ul li a[href="#menu"] {
