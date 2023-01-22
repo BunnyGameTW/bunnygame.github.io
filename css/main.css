@@ -2860,7 +2860,7 @@
 	#header {
 		padding: 8em 0 0.1em 0 ;
 	}
-
+	
 		#header .logo {
 			display: block;
 			border-bottom: 0;
@@ -3355,7 +3355,7 @@
 		@media screen and (max-width: 736px) {
 
 			#wrapper > * > .inner {
-				padding: 0 1.25em;
+				padding: 0 1.25em 4em;
 			}
 
 		}

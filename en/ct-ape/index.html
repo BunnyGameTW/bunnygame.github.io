@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut Icon" type="image/x-icon" href="/images/favicon.ico" />
+
+
+ 
+
+    <!--Description-->
+    
+        <meta name="description" content="Game, Program, and Design!">
+        
+
+    <!--Author-->
+    
+        <meta name="author" content="AngelCheng">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="CT APE"/>
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="BunnyGame - 小兔子遊戲開發"/>
+
+    <!--Page Cover-->
+    
+        <meta property="og:image" content=""/>
+    
+
+    <!-- Title -->
+    
+    <title>CT APE - BunnyGame - 小兔子遊戲開發</title>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/sass/main.css">
+
+
+    <!--[if lt IE 8]>
+        
+<script src="/js/ie/html5shiv.js"></script>
+
+    <![endif]-->
+
+    <!--[if lt IE 8]>
+        
+<link rel="stylesheet" href="/sass/ie8.css">
+
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+        
+<link rel="stylesheet" href="/sass/ie9.css">
+
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="/css/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Google Analytics -->
+    
+
+
+<meta name="generator" content="Hexo 6.1.0"></head>
+
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Menu -->
+        <!-- Header -->
+<header id="header">
+    <div class="inner">
+
+        <!-- Logo -->
+        <!-- <div class="inner"> -->
+        <a href="/en/" class="logo">
+            <span class="symbol"><img src="/images/logo_binly.png" alt="" /></span><span class="title">BunnyGame - 小兔子遊戲開發</span>
+        </a>
+        
+    <!-- <div> -->
+        <a href="/ct-ape/" class=" button lang logo")>
+            <span class="icon">
+                <i class="icon fa-globe"></i>
+            </span>
+            <span>English</span>     
+        </a>      
+    <!-- </div> -->
+
+        <!-- </div> -->
+        <!-- Nav -->
+        <nav>
+            <ul>
+                <li><a href="#menu">Menu</a></li>
+            </ul>
+        </nav>
+
+    </div>
+</header>
+
+<!-- Menu -->
+<nav id="menu">
+    <h2>Menu</h2>
+    <ul>
+        
+            <li>
+                <a href="/en/">Home</a>
+            </li>
+        
+            <li>
+                <a href="/en/tags/original-game">Original Game</a>
+            </li>
+        
+            <li>
+                <a href="/en/tags/fan-game">Fan Game</a>
+            </li>
+        
+            <li>
+                <a href="/en/tags/random-stuff">Random Stuff</a>
+            </li>
+        
+            <li>
+                <a href="/en/tags/art">Art</a>
+            </li>
+        
+            <li>
+                <a href="/en/tags/code">Code</a>
+            </li>
+        
+    </ul>
+</nav>
+
+
+        <div id="main">
+            <div class="inner">
+
+                <!-- Main Content -->
+                
+
+    <h1>CT APE</h1>
+
+
+
+<!-- Gallery -->
+
+    
+<div class="gallery-container">
+    
+        
+            <div class="picture-container">
+                <div>
+                    <img src="/../images/ct-ape/1.webp" class="img-thumbnail" />
+                </div>
+            </div>
+        
+            <div class="picture-container">
+                <div>
+                    <img src="/../images/ct-ape/2.webp" class="img-thumbnail" />
+                </div>
+            </div>
+        
+    
+</div>
+
+
+<!-- Content -->
+<h2 id="👉Introduction👈"><a href="#👉Introduction👈" class="headerlink" title="👉Introduction👈"></a>👉Introduction👈</h2><p>CT ape has to fight with bugs, try to mess up enemy and win the game at the same time!</p>
+<div class="video-container"><iframe src="https://www.youtube.com/embed/MfDioFjCEgc" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
+
+<p><br></br></p>
+<h2 id="🎮Game-link🎮"><a href="#🎮Game-link🎮" class="headerlink" title="🎮Game link🎮"></a>🎮Game link🎮</h2><iframe class="itch_and_ghcard" src="https://itch.io/embed/206390?linkback=true" height="167px"> </iframe>
+
+<p><br></br></p>
+<h2 id="🐱Github🐱"><a href="#🐱Github🐱" class="headerlink" title="🐱Github🐱"></a>🐱Github🐱</h2><p><a target="_blank" rel="noopener" href="https://github.com/aekly268/CityApe"><img class="itch_and_ghcard" src="https://gh-card.dev/repos/aekly268/CityApe.svg"></a></p>
+<h2 id="✏️Note✏️"><a href="#✏️Note✏️" class="headerlink" title="✏️Note✏️"></a>✏️Note✏️</h2><p>Due to the experience of <a href="/eat-honey">Eat Honey</a>, I can’t figure out the collision of puzzle, and it cause a bug keeps puzzle stucking.</p>
+<p>Original method: Player controls puzzle, and puzzle itself check the object of collision<br>Bug：the position of last frame is vary from every pc, position of the puzzle may set to the one after collide and puzzle set to can’t move at the same time.</p>
+<figure class="highlight cs"><figcaption><span>box</span><a target="_blank" rel="noopener" href="https://github.com/aekly268/CityApe/blob/master/Assets/Scripts/Box.cs">box.cs</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">OnTriggerEnter2D</span>(<span class="params">Collider2D collision</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span>(collision.tag == <span class="string">&quot;box&quot;</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        transform.position = lastPos;</span><br><span class="line">        canMove = <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (collision.tag == <span class="string">&quot;Player&quot;</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        player = collision.GetComponent&lt;Player&gt;();</span><br><span class="line">        player.canMove = <span class="literal">false</span>;          </span><br><span class="line">        player.LastPos();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>The teammate helped me to find out that check collision by raycast</p>
+<ol>
+<li>Check if it’s the same puzzle from player raycast and player interactive</li>
+<li>Set all puzzles to static when player release interact key</li>
+</ol>
+<figure class="highlight cs"><figcaption><span>player</span><a target="_blank" rel="noopener" href="https://github.com/aekly268/CityApe/blob/master/Assets/Scripts/Player.cs">player.cs</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">raycastBox</span>()</span></span><br><span class="line">&#123;</span><br><span class="line">    RaycastHit2D o = Physics2D.Linecast(transform.position, transform.position + faceTo, test);</span><br><span class="line">    <span class="keyword">if</span> (o)</span><br><span class="line">    &#123;      </span><br><span class="line">        <span class="keyword">if</span> (Input.GetKey(interact))</span><br><span class="line">        &#123;        </span><br><span class="line">            o.collider.gameObject.GetComponent&lt;Box&gt;().followPlayer(boxSpeedX, boxSpeedY);</span><br><span class="line">            o.collider.GetComponent&lt;Box&gt;().checkName(o.collider.gameObject.name);</span><br><span class="line">            canDragOther = <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (Input.GetKeyUp(interact)) &#123;</span><br><span class="line">        canDragOther = <span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; i &lt; GameObject.FindGameObjectsWithTag(<span class="string">&quot;box&quot;</span>).Length; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            FindObjectsOfType&lt;Box&gt;()[i].GetComponent&lt;Box&gt;().setStatic();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<!-- Tags -->
+
+
+
+<div class="tags">
+    <a href="/en/tags/original-game/" class="button small">original game</a> <a href="/en/tags/game-jam/" class="button small">game jam</a> <a href="/en/tags/unity/" class="button small">unity</a> <a href="/en/tags/code/" class="button small">code</a>
+</div>
+
+
+
+<!-- next article-->
+
+
+  
+    <a href="/en/321-stop/" class="button small" title="321 Stop!">prev:321 Stop!</a>
+  
+
+
+
+  
+    <a href="/en/animal-escape/" class="button small" title="Animal Escape">next:Animal Escape</a>
+  
+
+
+
+
+<!-- Comments -->
+<div>
+    
+
+
+</div>
+
+
+
+            </div>
+        </div>
+
+        <!-- Footer -->
+<footer id="footer">
+    <div class="inner">
+        <section>
+            <h2>About</h2>
+            <div>
+
+                Hi, I'm a cute bunny which is crazy about game, and my goal is to make more fun games!
+            </div>
+
+        </section>
+        <section>
+            <h2>Follow</h2>
+
+            <ul class="icons">
+                
+                    <li><a href="https://twitter.com/BunnyGameTW" class="icon style2 fa-twitter" target="_blank" ><span class="label">Twitter</span></a></li>
+                
+                
+                    <li><a href="https://www.facebook.com/BunnyGameTW" class="icon style2 fa-facebook" target="_blank" ><span class="label">Facebook</span></a></li>
+                
+                
+                    <li><a href="https://www.instagram.com/bunnygametw/" class="icon style2 fa-instagram" target="_blank" ><span class="label">Instagram</span></a></li>
+                
+                
+                
+                    <li><a href="https://github.com/aekly268" class="icon style2 fa-github" target="_blank" ><span class="label">GitHub</span></a></li>
+                
+                
+                
+                
+                
+                
+                
+                    <li><a href="https://www.youtube.com/channel/UC5M9CRDjm6cf-9Z-xq8S4-A/" class="icon style2 fa-youtube" target="_blank" ><span class="label">Youtube</span></a></li>
+                
+                
+
+            </ul>
+        
+
+        </section>
+
+    </div>
+</footer>
+
+    </div>
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+
+<script src="/js/jquery.min.js"></script>
+
+
+<!-- skel -->
+
+<script src="/js/skel.min.js"></script>
+
+
+<!-- Custom Code -->
+
+<script src="/js/util.js"></script>
+
+
+<!--[if lte IE 8]>
+
+<script src="/js/ie/respond.min.js"></script>
+
+<![endif]-->
+
+<!-- Custom Code -->
+
+<script src="/js/main.js"></script>
+
+
+<!-- Gallery -->
+<script src="//cdn.rawgit.com/noelboss/featherlight/1.3.5/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

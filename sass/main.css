@@ -2306,6 +2306,14 @@ button,
   button.small,
   .button.small {
     font-size: 0.6em; }
+  input[type="submit"].lang,
+  input[type="reset"].lang,
+  input[type="button"].lang,
+  button.lang,
+  .button.lang {
+    font-size: 0.5em;
+    float: right;
+    display: block; }
   input[type="submit"].big,
   input[type="reset"].big,
   input[type="button"].big,
@@ -2687,7 +2695,7 @@ button,
             opacity: 0; }
   @media screen and (max-width: 736px) {
     #header {
-      padding: 4em 0 0.1em 0 ; }
+      padding: 4em 0 4em 0 ; }
       #header nav {
         right: 0.5em;
         top: 0.5em; }
