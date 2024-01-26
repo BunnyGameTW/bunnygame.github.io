@@ -159,7 +159,7 @@
 <div class="video-container"><iframe src="https://www.youtube.com/embed/QaDM6UB901E" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
 
 <p><br></br></p>
-<h2 id="【Game-link】"><a href="#【Game-link】" class="headerlink" title="【Game link】"></a>【Game link】</h2><p><strong><a target="_blank" rel="noopener" href="https://dub.sh/BeanRun">Download APK</a></strong></p>
+<h2 id="【Game-link】"><a href="#【Game-link】" class="headerlink" title="【Game link】"></a>【Game link】</h2><p><a target="_blank" rel="noopener" href="https://dub.sh/BeanRun"><img src="/images/downloadAPK.webp" class=""></a></p>
 <p><br></br></p>
 <h2 id="【Github】"><a href="#【Github】" class="headerlink" title="【Github】"></a>【Github】</h2><p><a target="_blank" rel="noopener" href="https://github.com/BunnyGameTW/BeanRun"><img class="itch_and_ghcard" src="https://gh-card.dev/repos/BunnyGameTW/BeanRun.svg"></a></p>
 <p><br></br><br><br></br></p>
@@ -175,9 +175,9 @@
 <p><br></br></p>
 <h2 id="【Github】-2"><a href="#【Github】-2" class="headerlink" title="【Github】"></a>【Github】</h2><p><a target="_blank" rel="noopener" href="https://github.com/BunnyGameTW/Box2D"><img class="itch_and_ghcard" src="https://gh-card.dev/repos/BunnyGameTW/Box2D.svg"></a></p>
 <p><br></br></p>
-<h2 id="【Note】"><a href="#【Note】" class="headerlink" title="【Note】"></a>【Note】</h2><p>Cocos2d-x only includes basic library, let me introduce some of it</p>
+<h2 id="【Note】"><a href="#【Note】" class="headerlink" title="【Note】"></a>【Note】</h2><p>Cocos2d-x only includes basic library, let’s see some of them</p>
 <ol>
-<li><p>Button event:<br>Register during initialization phase</p>
+<li><p>Button event:<br>register during initialization phase</p>
 <figure class="highlight c"><figcaption><span>buttonEvent</span><a target="_blank" rel="noopener" href="https://github.com/BunnyGameTW/BeanRun/blob/master/Classes/HelloWorldScene.cpp">HelloWorldScene.cpp</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Button</span></span><br><span class="line">c3btn.playbtn = dynamic_cast&lt;Button*&gt;(rootNode-&gt;getChildByName(<span class="string">&quot;PlayBtn&quot;</span>));<span class="comment">//指定按鈕</span></span><br><span class="line">c3btn.playbtn-&gt;addTouchEventListener(CC_CALLBACK_2(HelloWorld::PlayBtnTouchEvent, this));</span><br></pre></td></tr></table></figure>
 <p>implement button event</p>
 <figure class="highlight c"><figcaption><span>buttonEvent</span><a target="_blank" rel="noopener" href="https://github.com/BunnyGameTW/BeanRun/blob/master/Classes/HelloWorldScene.cpp">HelloWorldScene.cpp</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">HelloWorld::PlayBtnTouchEvent</span><span class="params">(Ref *pSender, Widget::TouchEventType type)</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">switch</span> (type)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">case</span> Widget::TouchEventType::BEGAN:</span><br><span class="line">			<span class="built_in">log</span>(<span class="string">&quot;Touch Down&quot;</span>);</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">case</span> Widget::TouchEventType::MOVED:</span><br><span class="line">			<span class="built_in">log</span>(<span class="string">&quot;Touch Move&quot;</span>);</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">case</span> Widget::TouchEventType::ENDED:</span><br><span class="line">			<span class="built_in">log</span>(<span class="string">&quot;Touch Up&quot;</span>);</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">case</span> Widget::TouchEventType::CANCELED:</span><br><span class="line">			<span class="built_in">log</span>(<span class="string">&quot;Touch Cancelled&quot;</span>);</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">default</span>:</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -238,7 +238,6 @@
         <section>
             <h2>About</h2>
             <div>
-
                 Hi, I'm a cute bunny which is crazy about game, and my goal is to make more fun games!
             </div>
 
@@ -247,6 +246,14 @@
             <h2>Follow</h2>
 
             <ul class="icons">
+                
+                    <li><a href="mailto:bunnygametw@gmail.com?subject=hello bunny" class="icon style2 fa-envelope-o" target="_blank" ><span class="label">Email</span></a></li>
+                
+                
+                    <li><a href="https://www.youtube.com/channel/UC5M9CRDjm6cf-9Z-xq8S4-A/" class="icon style2 fa-youtube" target="_blank" ><span class="label">Youtube</span></a></li>
+                
+                
+   
                 
                     <li><a href="https://twitter.com/BunnyGameTW" class="icon style2 fa-twitter" target="_blank" ><span class="label">Twitter</span></a></li>
                 
@@ -257,21 +264,15 @@
                     <li><a href="https://www.instagram.com/bunnygametw/" class="icon style2 fa-instagram" target="_blank" ><span class="label">Instagram</span></a></li>
                 
                 
-                
                     <li><a href="https://github.com/BunnyGameTW" class="icon style2 fa-github" target="_blank" ><span class="label">GitHub</span></a></li>
                 
                 
+                    <li><a href="https://sketchfab.com/BunnyGameTW" class="icon style2 fa-cube" target="_blank" ><span class="label">Sketchfab</span></a></li>
                 
                 
                 
-                    <li><a href="mailto:bunnygametw@gmail.com?subject=hello bunny" class="icon style2 fa-envelope-o" target="_blank" ><span class="label">Email</span></a></li>
                 
                 
-                
-                    <li><a href="https://www.youtube.com/channel/UC5M9CRDjm6cf-9Z-xq8S4-A/" class="icon style2 fa-youtube" target="_blank" ><span class="label">Youtube</span></a></li>
-                
-                
-
             </ul>
         
 

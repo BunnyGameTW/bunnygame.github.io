@@ -184,10 +184,10 @@
 <h2 id="【Github】"><a href="#【Github】" class="headerlink" title="【Github】"></a>【Github】</h2><p><a target="_blank" rel="noopener" href="https://github.com/BunnyGameTW/CityApe"><img class="itch_and_ghcard" src="https://gh-card.dev/repos/BunnyGameTW/CityApe.svg"></a></p>
 <p><br></br></p>
 <h2 id="【Note】"><a href="#【Note】" class="headerlink" title="【Note】"></a>【Note】</h2><p>Due to the experience of <a href="/en/eat-honey">Eat Honey</a>, I can’t figure out the collision of puzzle, and it cause a bug keeps puzzle stucking.</p>
-<p>Original method: Player controls puzzle, and puzzle itself check the object of collision<br>Bug: the position of last frame is vary from every pc, position of the puzzle may set to the one after collide and puzzle set to can’t move at the same time.</p>
+<p>Original method: Player controls puzzle, and puzzle itself check the object of collision.<br>Bug: the position of last frame is vary from every pc, position of the puzzle may set to the one after collide and puzzle set to can’t move at the same time.</p>
 <figure class="highlight cs"><figcaption><span>box</span><a target="_blank" rel="noopener" href="https://github.com/BunnyGameTW/CityApe/blob/master/Assets/Scripts/Box.cs">box.cs</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">OnTriggerEnter2D</span>(<span class="params">Collider2D collision</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span>(collision.tag == <span class="string">&quot;box&quot;</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        transform.position = lastPos;</span><br><span class="line">        canMove = <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (collision.tag == <span class="string">&quot;Player&quot;</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        player = collision.GetComponent&lt;Player&gt;();</span><br><span class="line">        player.canMove = <span class="literal">false</span>;          </span><br><span class="line">        player.LastPos();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>The teammate helped me to find out that check collision by raycast</p>
+<p>The teammate helped me to find out that check collision by raycast.</p>
 <ol>
 <li>Check if it’s the same puzzle from player raycast and player interactive</li>
 <li>Set all puzzles to static when player release interact key</li>
@@ -239,7 +239,6 @@
         <section>
             <h2>About</h2>
             <div>
-
                 Hi, I'm a cute bunny which is crazy about game, and my goal is to make more fun games!
             </div>
 
@@ -248,6 +247,14 @@
             <h2>Follow</h2>
 
             <ul class="icons">
+                
+                    <li><a href="mailto:bunnygametw@gmail.com?subject=hello bunny" class="icon style2 fa-envelope-o" target="_blank" ><span class="label">Email</span></a></li>
+                
+                
+                    <li><a href="https://www.youtube.com/channel/UC5M9CRDjm6cf-9Z-xq8S4-A/" class="icon style2 fa-youtube" target="_blank" ><span class="label">Youtube</span></a></li>
+                
+                
+   
                 
                     <li><a href="https://twitter.com/BunnyGameTW" class="icon style2 fa-twitter" target="_blank" ><span class="label">Twitter</span></a></li>
                 
@@ -258,21 +265,15 @@
                     <li><a href="https://www.instagram.com/bunnygametw/" class="icon style2 fa-instagram" target="_blank" ><span class="label">Instagram</span></a></li>
                 
                 
-                
                     <li><a href="https://github.com/BunnyGameTW" class="icon style2 fa-github" target="_blank" ><span class="label">GitHub</span></a></li>
                 
                 
+                    <li><a href="https://sketchfab.com/BunnyGameTW" class="icon style2 fa-cube" target="_blank" ><span class="label">Sketchfab</span></a></li>
                 
                 
                 
-                    <li><a href="mailto:bunnygametw@gmail.com?subject=hello bunny" class="icon style2 fa-envelope-o" target="_blank" ><span class="label">Email</span></a></li>
                 
                 
-                
-                    <li><a href="https://www.youtube.com/channel/UC5M9CRDjm6cf-9Z-xq8S4-A/" class="icon style2 fa-youtube" target="_blank" ><span class="label">Youtube</span></a></li>
-                
-                
-
             </ul>
         
 

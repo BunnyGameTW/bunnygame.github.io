@@ -193,16 +193,15 @@
 <h2 id="【遊戲連結】"><a href="#【遊戲連結】" class="headerlink" title="【遊戲連結】"></a>【遊戲連結】</h2><iframe class="itch_and_ghcard" src="https://itch.io/embed/1781930?linkback=true" height="167px"> </iframe>
 
 <p><br></br></p>
-<h2 id="【心得】"><a href="#【心得】" class="headerlink" title="【心得】"></a>【心得】</h2><p>這次遊戲主要就是推坑大家我喜歡的推，一直很喜歡她們的互動，可以說是我掉入兔子洞的主因<br>然後為了測試遊戲我變得好會拼拼圖😆</p>
-<p>一開始確定主要玩法和所需要的美術圖量後就發現時間一定不夠，所以找了朋友魚鬆幫忙寫程式，真的超級感謝他願意幫忙<br>程式寫得很乾淨又很快超級凱瑞，我負責施展我的幼稚園塗鴉魔法，但這次魔力量不太夠，不知道為什麼進度就是很緩慢…<br>到最後開始無限縮小遊戲規模，趕在聖誕節前先做出第一個故事，能夠有穩定產出的速度也是我需要學習的😔</p>
-<p>想做的東西來不及一次完成，所以會分次更新，之後會嘗試加入更多內容，並上架到手機平台！</p>
+<h2 id="【心得】"><a href="#【心得】" class="headerlink" title="【心得】"></a>【心得】</h2><p>這次遊戲主要就是推坑大家我喜歡的推，一直很喜歡她們的互動，可以說是我掉入兔子洞的主因。<br>然後為了測試遊戲我變得好會拼拼圖😆</p>
+<p>一開始確定主要玩法和所需要的美術圖量後就發現時間一定不夠，所以找了朋友幫忙寫程式，真的超級感謝他願意幫忙！<br>程式寫得很乾淨又很快超級凱瑞，我負責施展我的幼稚園塗鴉魔法，但這次魔力量不太夠，不知道為什麼進度就是很緩慢…<br>到最後開始無限縮小遊戲規模，趕在聖誕節前先做出第一個故事，能夠有穩定產出的速度也是我需要學習的😔</p>
 <p><br></br></p>
 <h2 id="【Github】"><a href="#【Github】" class="headerlink" title="【Github】"></a>【Github】</h2><p><a target="_blank" rel="noopener" href="https://github.com/BunnyGameTW/TakamoriPuzzle"><img class="itch_and_ghcard" src="https://gh-card.dev/repos/BunnyGameTW/TakamoriPuzzle.svg"></a></p>
 <p><br></br></p>
 <h2 id="【筆記】"><a href="#【筆記】" class="headerlink" title="【筆記】"></a>【筆記】</h2><ol>
-<li>使用插件<a target="_blank" rel="noopener" href="https://github.com/mob-sakai/SoftMaskForUGUI">SoftMaskForUGUI</a>，build WebGL在IOS裝置上有部分圖片會莫名消失：<br>這真的很詭異，而且也不是所有有用到的都會消失，最後還是改回unity內建的mask然後再多疊一層外框圖上去</li>
-<li>劇本是讀excel資料來顯示的，這樣比較好實作多語言，本來很天真的直接指定讀檔案的路徑(ex: Application.dataPath + “&#x2F;Resources&#x2F;“ + path)，但後來才想起來unity會把有用到的資源變成一整包，這樣寫直接找不到檔案壞掉：<br>改成放在Streaming Asset底下解決</li>
-<li>WebGL讀取檔案不能直接取用，要另外透過WebRequest去取得<br>讀取excel的程式碼：<figure class="highlight cs"><figcaption><span>LoadExcel</span><a target="_blank" rel="noopener" href="https://github.com/BunnyGameTW/TakamoriPuzzle/blob/main/Assets/Scripts/Data/LoadExcel.cs">LoadExcel.cs</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/** 讀取excel檔案 */</span></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">loadFile</span>(<span class="params"><span class="built_in">string</span> path</span>)</span> &#123;</span><br><span class="line">       path = Application.streamingAssetsPath + <span class="string">&quot;/&quot;</span> + path;</span><br><span class="line">       <span class="meta">#<span class="keyword">if</span> UNITY_WEBGL        </span></span><br><span class="line">           StartCoroutine(GetText(path));</span><br><span class="line">       <span class="meta">#<span class="keyword">else</span></span></span><br><span class="line">           FileStream stream = File.Open(path, FileMode.Open, FileAccess.Read);</span><br><span class="line">           DirectRead(stream);</span><br><span class="line">       <span class="meta">#<span class="keyword">endif</span></span></span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   <span class="function">IEnumerator <span class="title">GetText</span>(<span class="params"><span class="built_in">string</span> path</span>)</span></span><br><span class="line">   &#123;</span><br><span class="line">       UnityWebRequest uwr = UnityWebRequest.Get(path);</span><br><span class="line">       <span class="keyword">yield</span> <span class="keyword">return</span> uwr.SendWebRequest();</span><br><span class="line"></span><br><span class="line">       <span class="keyword">if</span> (uwr.result != UnityWebRequest.Result.Success)</span><br><span class="line">           Debug.LogError(uwr.error);</span><br><span class="line">       <span class="keyword">else</span></span><br><span class="line">       &#123;</span><br><span class="line">           <span class="built_in">byte</span>[] results = uwr.downloadHandler.data;</span><br><span class="line">           Stream stream = <span class="keyword">new</span> MemoryStream(results);</span><br><span class="line">           DirectRead(stream);</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure></li>
+<li>使用插件<a target="_blank" rel="noopener" href="https://github.com/mob-sakai/SoftMaskForUGUI">SoftMaskForUGUI</a>，WebGL版本在iOS裝置上有部分圖片會莫名消失：<br>這真的很詭異，而且也不是所有有用到的都會消失，最後還是改回unity內建的mask然後再多疊一層外框圖上去</li>
+<li>讀Excel資料顯示劇本以便實作多語言時，直接指定讀檔案的路徑(ex: Application.dataPath + “&#x2F;Resources&#x2F;“ + path)輸出後會找不到檔案壞掉，因為Unity會把有用到的資源打成一包：<br>改成放在Streaming Assets底下解決</li>
+<li>WebGL讀取檔案不能直接取用，要另外透過WebRequest去取得<figure class="highlight cs"><figcaption><span>LoadExcel</span><a target="_blank" rel="noopener" href="https://github.com/BunnyGameTW/TakamoriPuzzle/blob/main/Assets/Scripts/Data/LoadExcel.cs">LoadExcel.cs</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/** 讀取excel檔案 */</span></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">loadFile</span>(<span class="params"><span class="built_in">string</span> path</span>)</span> &#123;</span><br><span class="line">       path = Application.streamingAssetsPath + <span class="string">&quot;/&quot;</span> + path;</span><br><span class="line">       <span class="meta">#<span class="keyword">if</span> UNITY_WEBGL        </span></span><br><span class="line">           StartCoroutine(GetText(path));</span><br><span class="line">       <span class="meta">#<span class="keyword">else</span></span></span><br><span class="line">           FileStream stream = File.Open(path, FileMode.Open, FileAccess.Read);</span><br><span class="line">           DirectRead(stream);</span><br><span class="line">       <span class="meta">#<span class="keyword">endif</span></span></span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   <span class="function">IEnumerator <span class="title">GetText</span>(<span class="params"><span class="built_in">string</span> path</span>)</span></span><br><span class="line">   &#123;</span><br><span class="line">       UnityWebRequest uwr = UnityWebRequest.Get(path);</span><br><span class="line">       <span class="keyword">yield</span> <span class="keyword">return</span> uwr.SendWebRequest();</span><br><span class="line"></span><br><span class="line">       <span class="keyword">if</span> (uwr.result != UnityWebRequest.Result.Success)</span><br><span class="line">           Debug.LogError(uwr.error);</span><br><span class="line">       <span class="keyword">else</span></span><br><span class="line">       &#123;</span><br><span class="line">           <span class="built_in">byte</span>[] results = uwr.downloadHandler.data;</span><br><span class="line">           Stream stream = <span class="keyword">new</span> MemoryStream(results);</span><br><span class="line">           DirectRead(stream);</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure></li>
 </ol>
 
 
@@ -248,7 +247,6 @@
         <section>
             <h2>About</h2>
             <div>
-
                 Hi, I'm a cute bunny which is crazy about game, and my goal is to make more fun games!
             </div>
 
@@ -257,6 +255,14 @@
             <h2>Follow</h2>
 
             <ul class="icons">
+                
+                    <li><a href="mailto:bunnygametw@gmail.com?subject=hello bunny" class="icon style2 fa-envelope-o" target="_blank" ><span class="label">Email</span></a></li>
+                
+                
+                    <li><a href="https://www.youtube.com/channel/UC5M9CRDjm6cf-9Z-xq8S4-A/" class="icon style2 fa-youtube" target="_blank" ><span class="label">Youtube</span></a></li>
+                
+                
+   
                 
                     <li><a href="https://twitter.com/BunnyGameTW" class="icon style2 fa-twitter" target="_blank" ><span class="label">Twitter</span></a></li>
                 
@@ -267,21 +273,15 @@
                     <li><a href="https://www.instagram.com/bunnygametw/" class="icon style2 fa-instagram" target="_blank" ><span class="label">Instagram</span></a></li>
                 
                 
-                
                     <li><a href="https://github.com/BunnyGameTW" class="icon style2 fa-github" target="_blank" ><span class="label">GitHub</span></a></li>
                 
                 
+                    <li><a href="https://sketchfab.com/BunnyGameTW" class="icon style2 fa-cube" target="_blank" ><span class="label">Sketchfab</span></a></li>
                 
                 
                 
-                    <li><a href="mailto:bunnygametw@gmail.com?subject=hello bunny" class="icon style2 fa-envelope-o" target="_blank" ><span class="label">Email</span></a></li>
                 
                 
-                
-                    <li><a href="https://www.youtube.com/channel/UC5M9CRDjm6cf-9Z-xq8S4-A/" class="icon style2 fa-youtube" target="_blank" ><span class="label">Youtube</span></a></li>
-                
-                
-
             </ul>
         
 

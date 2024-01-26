@@ -1645,8 +1645,8 @@
 /* Type */
 
 	body, input, select, textarea {
-		color: #585858;
-		font-family: "Microsoft JhengHei","Source Sans Pro", Helvetica, sans-serif;
+		color: #232b19;
+		font-family: system-ui, "Microsoft JhengHei","Source Sans Pro", Helvetica, sans-serif;
 		font-size: 16pt;
 		font-weight: 300;
 		line-height: 1.75;
@@ -1680,7 +1680,7 @@
 
 		a:hover {
 			border-bottom-color: transparent;
-			color: #f2849e !important;
+			color: #ffc368 !important;
 		}
 
 	strong, b {
@@ -1728,7 +1728,7 @@
 		font-weight: 900;
 		line-height: 1.5;
 		margin: 0 0 2em 0;
-		text-transform: uppercase;
+		/* text-transform: uppercase; */
 		letter-spacing: 0.35em;
 	}
 
@@ -2487,7 +2487,7 @@
 		text-align: center;
 		text-decoration: none;
 		text-overflow: ellipsis;
-		text-transform: uppercase;
+		/* text-transform: uppercase; */
 		white-space: nowrap;
 	}
 
@@ -2869,7 +2869,7 @@
 			letter-spacing: 0.35em;
 			margin: 0 0 2.5em 0;
 			text-decoration: none;
-			text-transform: uppercase;
+			/* text-transform: uppercase; */
 			display: inline-block;
 		}
 
@@ -2926,7 +2926,7 @@
 						font-size: 0.8em;
 						font-weight: 900;
 						letter-spacing: 0.35em;
-						text-transform: uppercase;
+						/* text-transform: uppercase; */
 					}
 
 					#header nav ul li a[href="#menu"] {
